@@ -1,0 +1,14 @@
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\bin\Debug\net9.0\HomeWork_HashTable.exe
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\bin\Debug\net9.0\HomeWork_HashTable.deps.json
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\bin\Debug\net9.0\HomeWork_HashTable.runtimeconfig.json
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\bin\Debug\net9.0\HomeWork_HashTable.dll
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\bin\Debug\net9.0\HomeWork_HashTable.pdb
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.AssemblyInfoInputs.cache
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.AssemblyInfo.cs
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.csproj.CoreCompileInputs.cache
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.dll
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\refint\HomeWork_HashTable.dll
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.pdb
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.genruntimeconfig.cache
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\ref\HomeWork_HashTable.dll

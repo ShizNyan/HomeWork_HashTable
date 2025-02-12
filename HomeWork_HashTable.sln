@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_HashTable", "HomeWork_HashTable\HomeWork_HashTable.csproj", "{F662BB00-1451-4A75-8AF6-B9FCB79247C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F662BB00-1451-4A75-8AF6-B9FCB79247C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F662BB00-1451-4A75-8AF6-B9FCB79247C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F662BB00-1451-4A75-8AF6-B9FCB79247C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F662BB00-1451-4A75-8AF6-B9FCB79247C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
