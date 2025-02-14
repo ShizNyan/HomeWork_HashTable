@@ -8,8 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d8ae015-e919-4bee-b22f-20f509a6b83d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
@@ -91,6 +89,7 @@
       <workItem from="1739458867316" duration="770000" />
       <workItem from="1739542328714" duration="3347000" />
       <workItem from="1739547352968" duration="1259000" />
+      <workItem from="1739549512096" duration="12000" />
     </task>
     <servers />
   </component>
