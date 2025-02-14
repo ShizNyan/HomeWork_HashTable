@@ -1,101 +1,150 @@
-﻿using System.Security.Cryptography;
+﻿using System.Drawing;
+using System.Security.Cryptography;
 
 namespace HomeWork_HashTable;
 
-public class myHashTable
+public unsafe class myHashTable
 {
-    private Dictionary<int, List<string>> _myHash = null; //Пустая хэш-таблица
     private int _hashKey; //хэш-ключ
     private int _maxSize = 50; //Максимальное количество элементов в хэш-таблице
-    private int offset = 5; //Переменная для прибавления к хэш-ключу при коллизии
+    private int _maxListSize = 10; //Максимальное количество элементов в списке хэш-таблицы по индексу
+    private int _offset = 5; //Переменная для прибавления к хэш-ключу при коллизии
+    private string*[] _myHash; //Массив для хранения указателей на списки с элементами
+    string[,] items; //Список для списка элементов
+
+    private string item; //Список для элементов
+                                            //Значения в списке в записи хэш-таблицы значат:
+                                            //0 - ключ-значение ячейки;
+                                            //1 - удалён (1)/не удалён (0) элемент; (пока не реализовано и убрано)
     
-    //Инициализация словаря-хэш-таблицы
+    //Инициализация массива указателей на списки с элементами
     public myHashTable()
     {
-        _myHash = new Dictionary<int, List<string>>(_maxSize);
+        _myHash = new string*[_maxSize];
+        items = new string[_maxSize, _maxListSize];
     }
     
     //Метод для добавления записей в хэш-таблицу
     //При коллизии к старой хэш-функции прибавляется offset, пока не будет найдена свободная ячейка (не получается проверить)
     public void AddItem(string key)
     {
-        List<string> item = new List<string>();
-        //Значения в списке в записи хэш-таблицы значат:
-        //0 - ключ-значение ячейки;
-        //1 - удалён (1)/не удалён (0) элемент;
         int deletedValue = 2; //флаг для обозначения, что объект в хэш-таблице был удалён;
-                              //1 - значение удалено; 0 - значение не удалено; 2 - такого хэш-ключа не было
-        _hashKey = key.GetHashCode();
-        if (_myHash.ContainsKey(_hashKey))
+                              //2 - такого хэш-ключа не было; 1 - значение удалено; 0 - значение не удалено
+        _hashKey = key.Length % _maxSize; //вычисляем хэш
+        if (_myHash[_hashKey] != null)
         {
-            List<string> itemTemp = _myHash[_hashKey];
-            if (itemTemp[1] == "1")
+            if (items[_hashKey, 0] != null)
             {
-                deletedValue = 1;
-            }
-            else
-            {
-                _hashKey = _hashKey + offset; //вычисляем второй хэш-ключ
                 deletedValue = 0;
             }
+            
         }
-        item.Add(key);
-        item.Add("0");
-        if (deletedValue == 2)
+        
+        if (deletedValue == 2) //добавляем новый элемент в хэш-таблицу
         {
-            _myHash.Add(_hashKey, item);
+            items[_hashKey,0] = _hashKey.ToString();
+            items[_hashKey, 1] = key; // + " 0";
+            fixed (string* link = &items[_hashKey,0])
+            {
+                _myHash[_hashKey] = link;
+            }; 
         }
         else if (deletedValue == 1)
         {
-            _myHash[_hashKey] = item;
+            //_myHash[_hashKey] = item;
+            //тут заменяем помеченное флагом удаления значение
+            //когда-нибудь
         }
-        else
+        else //тут добавляем новый элемент в список по уже существующему хэш-ключу
         {
-            _myHash.Add(_hashKey, item);
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[_hashKey, i] == null)
+                {
+                    items[_hashKey, i] = key; // + " 0";
+                    break;
+                }
+            }
         }
     }
-
-    //Не удаляем элемент, как таковой, но помечаем его флажком удаления
-    //Элемент остаётся в списке, но потом, если у нового элемента тот же хэш, мы ставим его на место этого элемента
-    //Как понять, какой именно элемент удалять, если есть два одинаковых элемента по одному и тому же ключу, но один с оффсет, а другой без?
+    
+    //Очищаем все элементы по определённому хэшу
+    public void CleanHash(string key)
+    {
+        int hashKey = key.Length % _maxSize;
+        if (_myHash[hashKey] != null)
+        {
+            for (int i = 0; i < _maxListSize-1; i++)
+            {
+                items[hashKey, i] = null;
+            }
+            _myHash[hashKey] = null;
+        }
+    }
+    
+    //Удаление определённого элемента по хэшу
     public void DeleteItem(string key)
     {
-        int hashKey = key.GetHashCode();
-        if (_myHash[hashKey][0] != key)
+        int hashKey = key.Length % _maxSize;
+        if (_myHash[hashKey] != null)
         {
-            hashKey = hashKey + offset;
+            for (int i = 0; i < _maxListSize-1; i++)
+            {
+                if (key == items[hashKey, i])
+                {
+                    items[hashKey, i] = null;
+                }
+            }
         }
-        _myHash[hashKey][1] = "1";
     }
 
     
     public void SearchItem(string key)
     {
-        int hashKey = key.GetHashCode();
-        string res = "Hash-Code Key-Value del-Flag \n";
-        if (_myHash[hashKey][0] != key)
+        int hashKey = key.Length % _maxSize;
+        string res = "";
+        int hit = 0;
+        if (_myHash[hashKey] != null)
         {
-            hashKey = hashKey + offset;
+            for (int i = 0; i < _maxListSize-1; i++)
+            {
+                Console.WriteLine(items[hashKey, i]);
+                if (items[hashKey, i] == key)
+                {
+                    res += "Item has been found\nHash-Code Key-Value\n";
+                    res += hashKey.ToString() + " " + key;
+                    hit++;
+                }
+            }
+            if (hit == 0)
+            {
+                res = "No item " + key + " has been found";
+            }
         }
-        res += hashKey + "; ";
-        for (int i = 0; i < _myHash[hashKey].Count; i++)
+        else
         {
-            res += _myHash[hashKey][i] + "; ";
+            res = "No item " + key + " has been found";
         }
         Console.WriteLine(res);
     }
 
     public void GetItems()
     {
-        string res = "Hash-Code Key-Value del-Flag \n";
-        foreach (var hash in _myHash)
+        string res = "Hash-Code Key-Value\n";
+        
+        for (int i = 0; i < _maxSize-1; i++)
         {
-            res += hash.Key + "; ";
-            for (int i = 0; i < _myHash[hash.Key].Count(); i++)
+            if (items[i, 0] != null)
             {
-                res += _myHash[hash.Key][i] + "; ";
+                for (int j = 0; j < _maxListSize-1; j++)
+                {
+                    if (items[i,j] != null)
+                    {
+                        res += items[i, j] + "; ";
+                    }
+                }
+                res += "\n";
             }
-            res += "\n";
         }
         Console.WriteLine(res);
     }

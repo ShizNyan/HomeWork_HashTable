@@ -12,3 +12,4 @@ C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug
 C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.pdb
 C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.genruntimeconfig.cache
 C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\ref\HomeWork_HashTable.dll
+C:\Users\ViuginaAS\RiderProjects\HomeWork_Hashtable\HomeWork_HashTable\obj\Debug\net9.0\HomeWork_HashTable.sourcelink.json
