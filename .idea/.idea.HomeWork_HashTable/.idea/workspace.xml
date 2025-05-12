@@ -8,8 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d8ae015-e919-4bee-b22f-20f509a6b83d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/ref/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/ref/HomeWork_HashTable.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/refint/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/refint/HomeWork_HashTable.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +104,26 @@
       <workItem from="1739542328714" duration="3347000" />
       <workItem from="1739547352968" duration="1259000" />
       <workItem from="1739549512096" duration="12000" />
+      <workItem from="1739780486927" duration="554000" />
+      <workItem from="1739782465809" duration="3165000" />
+      <workItem from="1745223969646" duration="600000" />
+      <workItem from="1747029327080" duration="5425000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

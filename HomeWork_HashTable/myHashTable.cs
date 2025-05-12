@@ -1,63 +1,40 @@
-﻿using System.Drawing;
-using System.Security.Cryptography;
+﻿namespace HomeWork_HashTable;
 
-namespace HomeWork_HashTable;
-
-public class myHashTable
+public class MyHashTable
 {
-    private int _maxSize = 50; //Максимальное количество элементов в хэш-таблице
-    private int _maxListSize = 10; //Максимальное количество элементов в списке хэш-таблицы по индексу
-    private int _offset = 5; //Переменная для прибавления к хэш-ключу при коллизии
-    private string[] _myHash; //Массив для хранения указателей на списки с элементами
-    string[,] items; //Список для списка элементов
-
-    private string item; //Список для элементов
-                                            //Значения в списке в записи хэш-таблицы значат:
-                                            //0 - ключ-значение ячейки;
-                                            //1 - удалён (1)/не удалён (0) элемент; (пока не реализовано и убрано)
+    private readonly int _maxSize = 50; //Максимальное количество элементов в хэш-таблице
+    private readonly int _maxListSize = 10; //Максимальное количество элементов в списке по индексу
+    private readonly string?[,] _myHash; //Массив ключей (индексов хэш-таблицы) и значений (элементов хэш-таблицы)
+    
+    //private string[,] _items; //Список для списка элементов
+    //private string _item; //Элемент хэш-таблицы
+                            //Значения в списке в записи хэш-таблицы значат:
+                            //0 - ключ-значение ячейки;
+                            //1 - удалён (1)/не удалён (0) элемент; (пока не реализовано и убрано)
     
     //Инициализация массива указателей на списки с элементами
-    public myHashTable()
+    public MyHashTable()
     {
-        _myHash = new string[_maxSize];
-        items = new string[_maxSize, _maxListSize];
+        _myHash = new string[_maxSize, _maxListSize];
     }
     
     //Метод для добавления записей в хэш-таблицу
-    //При коллизии к старой хэш-функции прибавляется offset, пока не будет найдена свободная ячейка (не получается проверить)
+    //При коллизии в список по индексу добавляется новое значение
     public void AddItem(string key)
     {
-        int deletedValue = 2; //флаг для обозначения, что объект в хэш-таблице был удалён;
-                              //2 - такого хэш-ключа не было; 1 - значение удалено; 0 - значение не удалено
-        int hashKey = GetHashCode(key); //вычисляем хэш
-        if (_myHash[hashKey] != null)
+        int hashKey = GetHashCode(key, _maxSize); //вычисляем хэш
+        if (_myHash[hashKey, 0] == null) //проверяем, существует ли какое-либо значение по полученному индексу
         {
-            if (items[hashKey, 0] != null)
+            _myHash[hashKey,0] = hashKey.ToString();
+            _myHash[hashKey, 1] = key;
+        }
+        else //тут добавляем новый элемент в список по уже существующему индексу
+        {
+            for (int i = 1; i < _myHash.Length; i++)
             {
-                deletedValue = 0;
-            }
-            
-        }
-        
-        if (deletedValue == 2) //добавляем новый элемент в хэш-таблицу
-        {
-            items[hashKey,0] = hashKey.ToString();
-            items[hashKey, 1] = key; // + " 0";
-            _myHash[hashKey] = items[hashKey,0];
-        }
-        else if (deletedValue == 1)
-        {
-            //_myHash[_hashKey] = item;
-            //тут заменяем помеченное флагом удаления значение
-            //когда-нибудь
-        }
-        else //тут добавляем новый элемент в список по уже существующему хэш-ключу
-        {
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (items[hashKey, i] == null)
+                if (_myHash[hashKey, i] == null)
                 {
-                    items[hashKey, i] = key; // + " 0";
+                    _myHash[hashKey, i] = key;
                     break;
                 }
             }
@@ -67,45 +44,43 @@ public class myHashTable
     //Очищаем все элементы по определённому хэшу
     public void CleanHash(string key)
     {
-        int hashKey = GetHashCode(key);
-        if (_myHash[hashKey] != null)
+        int hashKey = GetHashCode(key, _maxSize);
+        if (_myHash[hashKey, 0] != null)
         {
             for (int i = 0; i < _maxListSize-1; i++)
             {
-                items[hashKey, i] = null;
+                _myHash[hashKey, i] = null;
             }
-            _myHash[hashKey] = null;
         }
     }
     
     //Удаление определённого элемента по хэшу
     public void DeleteItem(string key)
     {
-        int hashKey = GetHashCode(key);
-        if (_myHash[hashKey] != null)
+        int hashKey = GetHashCode(key, _maxSize);
+        if (_myHash[hashKey, 0] != null)
         {
             for (int i = 0; i < _maxListSize-1; i++)
             {
-                if (key == items[hashKey, i])
+                if (key == _myHash[hashKey, i])
                 {
-                    items[hashKey, i] = null;
+                    _myHash[hashKey, i] = null;
                 }
             }
         }
     }
 
-    
+    //Поиск элемента по хэшу
     public void SearchItem(string key)
     {
-        int hashKey = GetHashCode(key);
+        int hashKey = GetHashCode(key, _maxSize);
         string res = "";
         int hit = 0;
-        if (_myHash[hashKey] != null)
+        if (_myHash[hashKey, 0] != null)
         {
             for (int i = 0; i < _maxListSize-1; i++)
             {
-                Console.WriteLine(items[hashKey, i]);
-                if (items[hashKey, i] == key)
+                if (_myHash[hashKey, i] == key)
                 {
                     res += "Item has been found\nHash-Code Key-Value\n";
                     res += hashKey.ToString() + " " + key;
@@ -124,19 +99,20 @@ public class myHashTable
         Console.WriteLine(res);
     }
 
+    //Вывод всех элементов хэш-таблицы 
     public void GetItems()
     {
         string res = "Hash-Code Key-Value\n";
         
         for (int i = 0; i < _maxSize-1; i++)
         {
-            if (items[i, 0] != null)
+            if (_myHash[i, 0] != null)
             {
                 for (int j = 0; j < _maxListSize-1; j++)
                 {
-                    if (items[i,j] != null)
+                    if (_myHash[i,j] != null)
                     {
-                        res += items[i, j] + "; ";
+                        res += _myHash[i, j] + "; ";
                     }
                 }
                 res += "\n";
@@ -145,9 +121,9 @@ public class myHashTable
         Console.WriteLine(res);
     }
 
-    int GetHashCode(string key)
+    int GetHashCode(string key, int size)
     {
-        int hash = key.Length % _maxSize;
+        int hash = key.Length % size;
         return hash;
     }
 }

@@ -3,7 +3,7 @@
 using HomeWork_HashTable;
 
 Console.WriteLine("Solution started");
-var myHash = new myHashTable();
+var myHash = new MyHashTable();
 myHash.AddItem( "Hello");
 myHash.AddItem( "How are you");
 myHash.AddItem( "Chick");
@@ -14,9 +14,9 @@ myHash.DeleteItem("How are you");
 Console.WriteLine("Deleted item How are you");
 myHash.GetItems();
 Console.WriteLine();
-Console.WriteLine("Looking for items How are you and Hello1");
+Console.WriteLine("Looking for items How are you and ByeBye");
 myHash.SearchItem("How are you");
-myHash.SearchItem("Hello1");
+myHash.SearchItem("ByeBye");
 Console.WriteLine();
 Console.WriteLine("Cleaning hash for key How are you");
 myHash.CleanHash("How are you");
