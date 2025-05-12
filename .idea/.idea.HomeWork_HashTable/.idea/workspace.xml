@@ -7,24 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d8ae015-e919-4bee-b22f-20f509a6b83d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWork_HashTable/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/bin/Debug/net9.0/HomeWork_HashTable.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/myHashTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/HomeWork_HashTable.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/ref/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/ref/HomeWork_HashTable.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/refint/HomeWork_HashTable.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/Debug/net9.0/refint/HomeWork_HashTable.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork_HashTable/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork_HashTable/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="8d8ae015-e919-4bee-b22f-20f509a6b83d" name="Changes" comment="Изменения в классе myHashTable.cs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +15,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3/src/libraries/System.Console/src/System/Console.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -107,13 +92,23 @@
       <workItem from="1739780486927" duration="554000" />
       <workItem from="1739782465809" duration="3165000" />
       <workItem from="1745223969646" duration="600000" />
-      <workItem from="1747029327080" duration="5425000" />
+      <workItem from="1747029327080" duration="5602000" />
     </task>
+    <task id="LOCAL-00001" summary="Изменения в классе myHashTable.cs">
+      <option name="closed" value="true" />
+      <created>1747035215999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747035215999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -127,5 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Изменения в классе myHashTable.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменения в классе myHashTable.cs" />
   </component>
 </project>
